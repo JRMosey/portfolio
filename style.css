@@ -296,3 +296,25 @@ p, li {
     box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
 }
 
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0077b5; /* LinkedIn bleu par défaut */
+}
+
+/* Vidéos dans les cartes de projets */
+.project-card video {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
