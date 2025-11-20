@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 
-    <!-- Lien Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- IMPORTANT => AJOUT DU defer -->
+    <script src="script.js" defer></script>
+
+    <!-- Icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Sidebar gauche (logo ou photo) -->
+    <!-- Sidebar gauche (logo) -->
     <aside class="sidebar">
         <img src="img/mkPic.jpg" alt="Mon Logo ou Photo" class="logo">
     </aside>
@@ -35,7 +38,7 @@
         <section id="accueil" class="hero">
             <div class="hero-text">
                 <h1>Salut, je suis <span>Moses</span></h1>
-                <p>Étudiant en informatique à Montréal, passionné par le développement, la programmation et la resolution des problemes.</p>
+                <p>Étudiant en informatique à Montréal, passionné par le développement, la programmation et la résolution des problèmes.</p>
                 <a href="#projets" class="btn">Voir mes projets</a>
             </div>
         </section>
@@ -48,14 +51,8 @@
                 </div>
                 <div class="about-text">
                     <h2>À propos</h2>
-                    <p>
-                        Étudiant en informatique au Collège LaSalle Montréal, je développe des projets web et logiciels avec passion. 
-                        J’aime transformer les idées en solutions concrètes à travers la technologie.
-                    </p>
-                    <p>
-                        En dehors de l’informatique, je joue du piano , crée du contenu et j’écris. 
-                        J’aime l’innovation, le mindset positif et le travail bien fait.
-                    </p>
+                    <p>Étudiant en informatique au Collège LaSalle Montréal, je développe des projets web et logiciels avec passion.</p>
+                    <p>En dehors de l’informatique, je joue du piano, crée du contenu et j’écris.</p>
                 </div>
             </div>
         </section>
@@ -65,27 +62,24 @@
             <h2>Mes projets</h2>
             <div class="projects-container">
 
-                <!-- Projet 1 -->
                 <div class="project-card">
                     <video src="videos/shammah_demo.mp4" autoplay muted loop playsinline></video>
                     <h3>Application de gestion</h3>
-                    <p>Application web en Flask pour la gestion d’une église (membres, finances, activités).</p>
+                    <p>Gestion d’église (membres, finances, activités).</p>
                     <a href="#" class="btn">Voir</a>
                 </div>
 
-                <!-- Projet 2 -->
                 <div class="project-card">
                     <video src="videos/BetZone-demo.mp4" autoplay muted loop playsinline></video>
                     <h3>BetZone</h3>
-                    <p>Application mobile simulant les activités de paris sportifs en Java, il est encore en création</p>
+                    <p>Paris sportifs (Java - en cours).</p>
                     <a href="#" class="btn">Voir</a>
                 </div>
 
-                <!-- Projet 3 -->
                 <div class="project-card">
                     <video src="videos/crypto_trade-demo.mp4" autoplay muted loop playsinline></video>
                     <h3>Crypto Trade</h3>
-                    <p>Application web en PHP et JavaScript pour l'achat vente des crypto monnaies</p>
+                    <p>Achat/Vente de cryptos (PHP & JS).</p>
                     <a href="#" class="btn">Voir</a>
                 </div>
 
@@ -109,14 +103,31 @@
             <p>📧 Mail : <a href="mailto:kasidim7@gmail.com">kasidim7@gmail.com</a></p>
             <p>📱 Tel : +1 438-686-9485</p>
 
-            <!-- Liens réseaux sociaux -->
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/kasidim7" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/moses.mbafumoya.37?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/mosesjr_5?igsh=dW96NWxuMWZkZGpq&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/mosesjr_5" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </section>
 
     </div>
+
+    <!-- Fenêtre modale -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="modal-left">
+                <video id="modal-video" autoplay muted loop></video>
+            </div>
+
+            <div class="modal-right">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
+                <a id="modal-link" href="#" target="_blank" class="btn">Voir le code</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
